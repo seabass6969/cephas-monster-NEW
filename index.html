@@ -15,7 +15,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Space+Mono&display=swap');
         body {
             margin: 0;
-	        font-family: 'Space Mono', monospace;;
+    font-family: 'Space Mono', monospace;
+        background: linear-gradient(
+            to right,
+            #EE9CA7 0%,
+            #fbf8cc 100%
+        );
         }
         canvas {
             position: absolute;
@@ -32,6 +37,12 @@
     }
     h1 {
         text-decoration: #777 1px
+    }
+    .socal {
+        margin-left: 20px;
+        margin-top: 10px;
+        height: 60px;
+        width: 60px;
     }
     .monster{
         background: linear-gradient(
@@ -58,12 +69,23 @@
     a::after{
         color: powderblue;
     }
+@media (max-width: 600px){
+    .socal {
+        margin-left: 10px;
+        margin-top: 5px;
+        height: 30px;
+        width: 30px;
+    }
+}
 </style>
-  
   <body>
     <div class="top">
     <h1 class="monster">Cephas project:</h1>
-        <h1 class="bottom"><a href="https://sky.cephas.monster/">skyblock</a> <a href="https://covid.cephas.monster/">covid</a> <a href="https://blog.cephas.monster/">blog</a> <a href="https://calc.cephas.monster/">calc</a></h1>
+        <h1 class="bottom"><a href="https://sky.cephas.monster/">skyblock</a> <a href="https://covid.cephas.monster/">covid</a> <a href="https://blog.cephas.monster/">blog</a> <a href="https://calc.cephas.monster/">calc</a>
+            <br>
+            <a href="https://github.com/seabass6969/"><img class="socal" src="/github.png" alt="Github logo"></a>
+            <img class="socal" src="/Discord-Logo-Color.svg" alt="Discord logo"><a href="">Netscapes#9407</a>
+        </h1>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
