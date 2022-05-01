@@ -2,6 +2,7 @@ import IMGskyblock from './skyblock.png'
 import IMGcovid from './covid.png'
 import IMGcalc from './calc.png'
 import IMGblog from './blog.png'
+import IMGrick from './rick_gen.png'
 import * as THREE from 'three';
 
 
@@ -14,8 +15,8 @@ const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.inner
 const renderer = new THREE.WebGLRenderer({antialias: true,alpha: true});
 renderer.setSize( window.innerWidth, window.innerHeight );
 console.log(window.innerHeight)
-
-document.body.appendChild( renderer.domElement );
+let canvasContainer = document.getElementById("canvas")
+canvasContainer.appendChild( renderer.domElement );
 
 // scene.background = new THREE.Color(0xffffff)
 
@@ -25,7 +26,7 @@ const materialIMG = [
     new THREE.MeshBasicMaterial({map: loader.load(IMGcovid)}),
     new THREE.MeshBasicMaterial({map: loader.load(IMGblog)}),
     new THREE.MeshBasicMaterial({map: loader.load(IMGskyblock)}),
-    new THREE.MeshBasicMaterial({map: loader.load(IMGblog)}),
+    new THREE.MeshBasicMaterial({map: loader.load(IMGrick)}),
 ]
 const geo = new THREE.BoxGeometry(3,3,3)
 const cubeIMG = new THREE.Mesh(geo,materialIMG)
