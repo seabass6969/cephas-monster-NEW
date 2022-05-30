@@ -87,6 +87,7 @@
         grid-gap: 1vw;
 
     }
+
     .card{
         transition: 0.3s;
         margin:1vw 1vw 1vw 1vw;
@@ -114,6 +115,52 @@
         font-size: 20px;
         padding-left: 5px;
     }
+    @keyframes typing {
+        0% {content:"I love "}
+        5% {content:"I love c"}
+        10% {content:"I love co"}
+        15% {content:"I love cod"}
+        20% {content:"I love codi"}
+        25% {content:"I love codin"}
+        30% {content:"I love coding"}
+        31% {content:"I love coding"}
+        32% {content:"I love coding🚀"}
+        49% {content:"I love coding"}
+        50% {content:"I love codin"}
+        51% {content:"I love codi"}
+        52% {content:"I love cod"}
+        53% {content:"I love co"}
+        54% {content:"I love c"}
+        55% {content:"I love "}
+        60% {content:"I love g"}
+        65% {content:"I love ga"}
+        70% {content:"I love gam"}
+        75% {content:"I love gami"}
+        80% {content:"I love gamin"}
+        85% {content:"I love gaming"}
+        86% {content:"I love gamin"}
+        87% {content:"I love gami"}
+        88% {content:"I love gam"}
+        89% {content:"I love ga"}
+        90% {content:"I love g"}
+        91% {content:"I love "}
+        100% {content:"I love "}
+    }
+    @keyframes blink {
+        0% {border-right: .5em solid orange;}
+        100% {border-right: .5em solid transparent;}
+    }
+    .typing{
+        text-align: center;
+        font-size: 50px;
+    }
+    .typing::before{
+        content: "I love ";
+        animation: typing infinite 10s,
+            blink infinite 0.8s;
+        animation-timing-function: ease;
+        border-right: .5em solid orange;
+    }
 @media (max-width: 600px){
     .socal {
         margin-left: 10px;
@@ -133,7 +180,7 @@
     <div class="top">
     <h1 class="monster">Cephas project:</h1>
     </div>
-    <script type="module" src="/src/main.ts"></script>
+    <div class="typing"></div><script type="module" src="/src/main.ts"></script>
     <div id="canvas"></div>
         <h1 class="bottom">
 <div class="cards">
