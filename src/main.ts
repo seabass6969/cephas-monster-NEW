@@ -3,6 +3,7 @@ import IMGcovid from './covid.png'
 import IMGcalc from './calc.png'
 import IMGblog from './blog.png'
 import IMGrick from './rick_gen.png'
+import IMGgamedle from './gamedle.png'
 import * as THREE from 'three';
 
 
@@ -22,10 +23,10 @@ canvasContainer.appendChild( renderer.domElement );
 
 const materialIMG = [
     new THREE.MeshBasicMaterial({map: loader.load(IMGskyblock)}),
-    new THREE.MeshBasicMaterial({map: loader.load(IMGcalc)}),
+    new THREE.MeshBasicMaterial({map: loader.load(IMGgamedle)}),
     new THREE.MeshBasicMaterial({map: loader.load(IMGcovid)}),
     new THREE.MeshBasicMaterial({map: loader.load(IMGblog)}),
-    new THREE.MeshBasicMaterial({map: loader.load(IMGskyblock)}),
+    new THREE.MeshBasicMaterial({map: loader.load(IMGcalc)}),
     new THREE.MeshBasicMaterial({map: loader.load(IMGrick)}),
 ]
 const geo = new THREE.BoxGeometry(3,3,3)
